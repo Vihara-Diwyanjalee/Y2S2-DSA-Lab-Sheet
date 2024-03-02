@@ -1,1 +1,39 @@
+public class Link {
+	
+	public String name;
+	public double average;
+	public Link next;
+	
+	public Link(String name, double avg) {
+		this.name = name;
+		this.average = avg;
+		this.next = null;
+	}
+	
+	public void displayDetails() {
+		System.out.println("Name :\t" + name + " || Average :\t" + average);
+		System.out.println();
+	}
+
+}
+
+public class LinkMain {
+
+	public static void main(String[] args) {
+		
+		Link Nipuna = new Link("Nipuna",53.5);
+		Link Aravinda = new Link("Aravinda",78.0);
+		Link Prashani = new Link("Prashani",69.5);
+		
+		Nipuna.next = Aravinda;
+		Aravinda.next = Prashani;
+		Prashani.next = null;
+		
+		Nipuna.displayDetails();
+		Aravinda.displayDetails();
+		Prashani.displayDetails();
+
+	}
+
+}
 
